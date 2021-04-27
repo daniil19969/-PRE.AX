@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRE.AX Марафон</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container">
+      <div class="menu">
+        <a href="#" class="logo__link">
+          <span class="logo menu__log">
+            Frontend <span class="logo__text--color">Job</span>
+          </span>
+        </a>
+
+        <nav class="nav menu__nav" data-menu>
+          <a href="#" class="nav__item active">
+            Поиск вакансий
+          </a>
+          <a href="#" class="nav__item">
+            Избранные вакансии
+          </a>
+        </nav>
+
+        <div class="header__mobile--menu" >
+          <input type="checkbox" id="checkbox1" class="checkbox1 visuallyHidden">
+          <label for="checkbox1">
+              <div class="hamburger hamburger1" data-btn-mobile-menu>
+                  <span class="bar bar1"></span>
+                  <span class="bar bar2"></span>
+                  <span class="bar bar3"></span>
+                  <span class="bar bar4"></span>
+              </div>
+          </label>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="filter modal-page-filter" id="filter">
+      <div class="container">
+
+        <div class="page__filter--form">
+
+          <form class="filter__form">
+
+            <div class="filter__form--block filter__form--block-city">
+              <input name="city" id="city" type="text" placeholder="Москва">
+            </div>
+
+            <div class="filter__form--block filter__form--block-shedule">
+              <a href="#" id="shedule dropdownMenuButton" data-dropdown-target="schedule">
+                Гибкий график
+              </a>
+              <div id="myDropdown" class="dropdown-content dropdown" data-dropdown="schedule">
+
+                <div class="dropdown__button--group">
+                  <input type="radio" class="radio" id="contactChoice1">
+                  <label for="contactChoice1" class="label__radio">Полный день</label>
+                </div>
+
+                <div class="dropdown__button--group">
+                  <input type="radio" class="radio" id="contactChoice1" checked>
+                  <label for="contactChoice1" class="label__radio">Гибкий график</label>
+                </div>
+
+                <div class="dropdown__button--group">
+                  <input type="radio" class="radio" id="contactChoice1">
+                  <label for="contactChoice1" class="label__radio">Удаленная работа</label>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="filter__form--block filter__form--block-busyness">
+              <a href="#" id="busyness dropdownMenuButton" data-dropdown-target="busyness">
+                Частичная занятость
+              </a>
+              <div id="myDropdown" class="dropdown-content dropdown" data-dropdown="busyness">
+
+                <div class="dropdown__button--group">
+                  <input type="radio" class="radio" id="contactChoice1">
+                  <label for="contactChoice1" class="label__radio">Полная занятость</label>
+                </div>
+
+                <div class="dropdown__button--group">
+                  <input type="radio" class="radio" id="contactChoice1" checked>
+                  <label for="contactChoice1" class="label__radio">Частичная занятость</label>
+                </div>
+
+                <div class="dropdown__button--group">
+                  <input type="radio" class="radio" id="contactChoice1">
+                  <label for="contactChoice1" class="label__radio">Проектная работа</label>
+                </div>
+
+                <div class="dropdown__button--group">
+                  <input type="radio" class="radio" id="contactChoice1">
+                  <label for="contactChoice1" class="label__radio">Стажировка</label>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="filter__form--block filter__form--block-years">
+              <a href="#" id="years dropdownMenuButton" data-dropdown-target="years">
+                От 1 года до 3 лет
+              </a>
+              <div id="myDropdown" class="dropdown-content dropdown" data-dropdown="years">
+
+                <div class="dropdown__button--group">
+                  <input type="radio" class="radio" id="contactChoice1">
+                  <label for="contactChoice1" class="label__radio">Нет опыта</label>
+                </div>
+
+                <div class="dropdown__button--group">
+                  <input type="radio" class="radio" id="contactChoice1" checked>
+                  <label for="contactChoice1" class="label__radio">От 1 года до 3 лет</label>
+                </div>
+
+                <div class="dropdown__button--group">
+                  <input type="radio" class="radio" id="contactChoice1">
+                  <label for="contactChoice1" class="label__radio">От 3 до 6 лет</label>
+                </div>
+
+                <div class="dropdown__button--group">
+                  <input type="radio" class="radio" id="contactChoice1">
+                  <label for="contactChoice1" class="label__radio">Более 6 лет</label>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="filter__form--block filter__form--block-price">
+              <input name="price " id="price" type="text" placeholder="150 000 руб.">
+            </div>
+
+            <div class="filter__form--block filter__form--block-fltered">
+              <a id="filter dropdownMenuButton" data-dropdown-target="filter">
+                Фильтры
+              </a>
+              <div id="myDropdown" class="dropdown-content dropdown" data-dropdown="filter">
+                <div class="filtered__dropdown filtered__dropdown--income">
+                  <label for="income">Доход</label>
+                  <input type="text" name="income" id="income" placeholder="150 000">
+                </div>
+
+                <div class="filtered__dropdown filtered__dropdown--schedule">
+                  <span>График работы</span>
+                  <div class="dropdown__button--group">
+                    <input type="radio" class="radio" id="contactChoice1">
+                    <label for="contactChoice1" class="label__radio">Полный день</label>
+                  </div>
+  
+                  <div class="dropdown__button--group">
+                    <input type="radio" class="radio" id="contactChoice1" checked>
+                    <label for="contactChoice1" class="label__radio">Гибкий график</label>
+                  </div>
+  
+                  <div class="dropdown__button--group">
+                    <input type="radio" class="radio" id="contactChoice1">
+                    <label for="contactChoice1" class="label__radio">Удаленная работа</label>
+                  </div>
+                </div>
+
+                <div class="filtered__dropdown filtered__dropdown--employment">
+                  <span>Тип занятости</span>
+                  <div class="dropdown__button--group">
+                    <input type="radio" class="radio" id="contactChoice1">
+                    <label for="contactChoice1" class="label__radio">Полная занятость</label>
+                  </div>
+  
+                  <div class="dropdown__button--group">
+                    <input type="radio" class="radio" id="contactChoice1" checked>
+                    <label for="contactChoice1" class="label__radio">Частичная занятость</label>
+                  </div>
+  
+                  <div class="dropdown__button--group">
+                    <input type="radio" class="radio" id="contactChoice1">
+                    <label for="contactChoice1" class="label__radio">Проектная работа</label>
+                  </div>
+  
+                  <div class="dropdown__button--group">
+                    <input type="radio" class="radio" id="contactChoice1">
+                    <label for="contactChoice1" class="label__radio">Стажировка</label>
+                  </div>
+                </div>
+
+                <div class="filtered__dropdown filtered__dropdown--work">
+                  <span>Опыт работы</span>
+                  <div class="dropdown__button--group">
+                    <input type="radio" class="radio" id="contactChoice1">
+                    <label for="contactChoice1" class="label__radio">Нет опыта</label>
+                  </div>
+  
+                  <div class="dropdown__button--group">
+                    <input type="radio" class="radio" id="contactChoice1" checked>
+                    <label for="contactChoice1" class="label__radio">От 1 года до 3 лет</label>
+                  </div>
+  
+                  <div class="dropdown__button--group">
+                    <input type="radio" class="radio" id="contactChoice1">
+                    <label for="contactChoice1" class="label__radio">От 3 до 6 лет</label>
+                  </div>
+  
+                  <div class="dropdown__button--group">
+                    <input type="radio" class="radio" id="contactChoice1">
+                    <label for="contactChoice1" class="label__radio">Более 6 лет</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <button type="submit" class="filter__form--submit">
+              Поиск
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="hero modal-hero-page" id="hero">
+      <div class="container">
+
+        <div class="hero__content">
+
+          <div class="row">
+            <div class="col-40">
+
+              <div class="hero__content--vacancy">
+
+                <div class="vacancy__card">
+                  <figure class="vacancy__card--image">
+                    <img src="img/vacancy-logo/1.png" alt="Интерент Люди" class="vacancy__cart--logo">
+                  </figure>
+
+                  <div class="vacancy__info">
+                    <span class="vacancy__company--name">
+                      Интернет Люди
+                    </span>
+
+                    <h3 class="vacancy__company--position">
+                      Front-end Разработчиĸ
+                    </h3>
+
+                    <span class="vacancy__company--location">
+                      Москва
+                    </span>
+
+                    <div class="vacancy__company--tags">
+                      <span>jQuery</span>
+                      <span>JavaScript</span>
+                      <span>CSS3</span>
+                      <span>React</span>
+                      <span>Git</span>
+                      <span>Vue</span>
+                      <span>Flexbox</span>
+                      <span>HTML5</span>
+                    </div>
+                  </div>
+
+                  <div class="vacancy__card--favorite">
+                    <svg class="favorite__off favorite__on" data-favorite viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10 1.66446C15.5477 -4.11405 29.418 5.99771 10 19C-9.41803 5.99898 4.45235 -4.11405 10 1.66446Z"/>
+                    </svg>
+                  </div>
+
+                  <div class="vacancy__card--date">
+                    <span>29/03/2021</span>
+                  </div>
+
+                </div>
+
+                <div class="vacancy__card">
+                  <figure class="vacancy__card--image">
+                    <img src="img/vacancy-logo/2.png" alt="Интерент Люди" class="vacancy__cart--logo">
+                  </figure>
+
+                  <div class="vacancy__info">
+                    <span class="vacancy__company--name">
+                      GOOD CALL DEVELOPMENT
+                    </span>
+
+                    <h3 class="vacancy__company--position">
+                      React Developer (Middle/Senior)
+                    </h3>
+
+                    <span class="vacancy__company--location">
+                      Москва
+                    </span>
+
+                    <div class="vacancy__company--tags">
+                      <span>jQuery</span>
+                      <span>JavaScript</span>
+                      <span>CSS3</span>
+                      <span>React</span>
+                      <span>Git</span>
+                    </div>
+                  </div>
+
+                  <div class="vacancy__card--favorite">
+                    <svg class="favorite__off favorite__on" data-favorite viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10 1.66446C15.5477 -4.11405 29.418 5.99771 10 19C-9.41803 5.99898 4.45235 -4.11405 10 1.66446Z"/>
+                    </svg>
+                  </div>
+
+                  <div class="vacancy__card--date">
+                    <span>29/03/2021</span>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="col-60">
+
+              <div class="vacancy__preview">
+
+                <div class="vacancy__card--modal-close">
+                    <img src="img/close.svg" alt="close">
+                </div>
+                
+                <div class="vacancy__preview--header">
+                  <a href="#" class="vacancy__preview--logo">
+                    <img src="img/vacancy-logo/3-big.png" alt="Winfinity">
+                  </a>
+
+                  <div class="vacancy__preview--info">
+                    <h1 class="vacancy__preview--title">
+                      Frontend developer (React)
+                    </h1>
+                    <div class="vacancy__preview--location-name">
+                      <span class="vacancy__preview--company">
+                        Winfinity
+                      </span>
+                      <span class="vacancy__preview--location">
+                        Москва
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="vacancy__preview--price">
+                  <h2>
+                    От 150 000 до 300 000 руб.
+                  </h2>
+                </div>
+
+                <div class="vacancy__preview--content">
+
+                  <p>
+                    Мы, <b>Winfinity</b>, занимаемся разработкой инновационных решений в области игорно-развлекательного контента.
+                  </p>
+
+                  <p>
+                    Для создания наших продуктов используются передовые технологии, среди которых: Computer Vision, Unreal Engine, Ultra Low Latency Video Streaming. У нас очень крутой и суперсовременный технопарк - от камер и света, до графических карт, которые почти невозможно найти.
+                  </p>
+
+                  <p>
+                    Сегодня мы на стадии активного развития. Мы создаём масштабный, технологически сложный и в тоже время очень интересный, глобальный проект - частью которого можете стать Вы!
+                  </p>
+
+                  <p class="text__sckill">
+                    <b>И если у Вас есть:</b>
+                  </p>
+
+                  <p>
+                    <span>
+                      опыт коммерческой разработки на JavaScript от 2 лет;
+                    </span>
+                    <span>
+                      опыт коммерческой разработки на React от 2 лет;
+                    </span>
+                    <span>
+                      опыт работы в команде с git;
+                    </span>
+                  </p>
+
+                  <p>
+                    опыт работы с любым сборщиком (webpack, gulp и т.д.).
+                    …то Вы именно тот, кого мы ищем!
+                  </p>
+
+                  <p>
+                    Обязательные знания:<br><br>
+                    Typescript;<br>
+                    Webpack;<br>
+                    Styled-components;<br>
+                    GraphQL;<br>
+                    Express;<br>
+                    MongoDB;<br>
+                    WebSockets;<br>
+                    Docker.<br>
+                  </p>
+
+                  <p>
+                    После испытательного срока мы предлагаем:<br>
+                    возможную релокацию в столицу Латвии с помощью в оформлении всех необходимых документов;<br>
+                    бесплатную стоянку рядом с современным офисом в центре города;<br>
+                    медицинскую страховку;<br>
+                    абонемент в спортивный зал.<br>
+                    Наша сила - в отсутствии бюрократии, легаси кода, чайка менеджмента, бизнеса, который уже не знает, чего хочет.
+                    <br>
+                    Мы за нестандартные идеи, профессиональный и творческий подход, отличные отношения в коллективе и результат.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
